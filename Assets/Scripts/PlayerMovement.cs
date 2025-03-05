@@ -9,6 +9,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Rigidbody playerRigidbody;
     [SerializeField] private float forceMagnitude = 10f;
     [SerializeField] private float maxSpeed = 500f;
+    [SerializeField] private float rotationSpeed = 10f;
+
     private Camera mainCamera;
     private Vector2 movementDirection;
 
@@ -26,11 +28,22 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    private void RotateTowardsMovementDirection()
+    {
+        if (playerRigidbody.linearVelocity.sqrMagnitude > 0)
+        {
+            Quaternion targetRotation = Quaternion.LookRotation(playerRigidbody.linearVelocity, Vector3.back);
+            Quaternion desiredRotation = Quaternion.Lerp(playerRigidbody.rotation, targetRotation, rotationSpeed * Time.fixedDeltaTime);
+            playerRigidbody.MoveRotation(desiredRotation);
+        }        
+    }
+
     // We use FixedUpdate for physics calculations
     private void FixedUpdate()
     {
         AddForceToRigidBody();
         LimitSpeed();
+        RotateTowardsMovementDirection();
     }
 
     private Vector3 TouchWorldPosition()

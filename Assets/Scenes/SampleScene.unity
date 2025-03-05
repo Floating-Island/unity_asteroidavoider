@@ -516,6 +516,7 @@ MonoBehaviour:
   playerRigidbody: {fileID: 859221680}
   forceMagnitude: 350
   maxSpeed: 4
+  rotationSpeed: 8
 --- !u!1001 &2057952371
 PrefabInstance:
   m_ObjectHideFlags: 0
