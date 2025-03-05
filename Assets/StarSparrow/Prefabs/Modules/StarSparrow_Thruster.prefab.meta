@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 4d8da171407a87a49b7bb5b3b0918e36
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 73167
+  packageName: Star Sparrow Modular Spaceship
+  packageVersion: 4.1
+  assetPath: Assets/StarSparrow/Prefabs/Modules/StarSparrow_Thruster.prefab
+  uploadId: 697583

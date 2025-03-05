@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 6807a4fbab15c3444aa44ff82bcbe872
+timeCreated: 1567011388
+licenseType: Store
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 73167
+  packageName: Star Sparrow Modular Spaceship
+  packageVersion: 4.1
+  assetPath: Assets/StarSparrow/Prefabs/BonusContent/Flying Insect.prefab
+  uploadId: 697583

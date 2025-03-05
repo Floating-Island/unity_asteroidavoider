@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 5f7d5f60379571b4ab916f85aae80a71
+timeCreated: 1568642984
+licenseType: Store
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 73167
+  packageName: Star Sparrow Modular Spaceship
+  packageVersion: 4.1
+  assetPath: Assets/StarSparrow/Prefabs/BonusContent/Mine Sample 1.prefab
+  uploadId: 697583

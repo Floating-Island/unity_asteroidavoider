@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 8c22678d7aa562145804b6f0af7e603a
+timeCreated: 1544428941
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 73167
+  packageName: Star Sparrow Modular Spaceship
+  packageVersion: 4.1
+  assetPath: Assets/StarSparrow/Prefabs/BonusContent/Tinniuq Planet.prefab
+  uploadId: 697583

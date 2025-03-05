@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: bccd59c329f7a11449e3220748484c14
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 73167
+  packageName: Star Sparrow Modular Spaceship
+  packageVersion: 4.1
+  assetPath: Assets/StarSparrow/Materials/Extra/StarSparrow_Black.mat
+  uploadId: 697583

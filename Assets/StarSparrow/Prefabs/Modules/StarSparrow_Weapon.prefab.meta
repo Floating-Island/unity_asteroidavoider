@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 01a1e23558e35e64989f5b1129a2c195
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 73167
+  packageName: Star Sparrow Modular Spaceship
+  packageVersion: 4.1
+  assetPath: Assets/StarSparrow/Prefabs/Modules/StarSparrow_Weapon.prefab
+  uploadId: 697583
