@@ -18,6 +18,21 @@ public class PlayerMovement : MonoBehaviour
         mainCamera = Camera.main;
     }
 
+    private void Update()
+    {
+        if (Touch.activeTouches.Count > 0)
+        {
+            UpdateMovementDirection();
+        }
+    }
+
+    // We use FixedUpdate for physics calculations
+    private void FixedUpdate()
+    {
+        AddForceToRigidBody();
+        LimitSpeed();
+    }
+
     private Vector3 TouchWorldPosition()
     {
         Vector2 touchPositionsSum = SumTouchPositions();
@@ -41,22 +56,8 @@ public class PlayerMovement : MonoBehaviour
 
     private void UpdateMovementDirection()
     {
-        movementDirection =  (TouchWorldPosition() - playerRigidbody.transform.position).normalized;
-    }
-
-    private void Update()
-    {
-        if (Touch.activeTouches.Count > 0)
-        {
-            UpdateMovementDirection();
-        }
-    }
-
-    // We use FixedUpdate for physics calculations
-    private void FixedUpdate()
-    {
-        AddForceToRigidBody();
-        LimitSpeed();
+        movementDirection =  TouchWorldPosition() - playerRigidbody.transform.position;
+        movementDirection.Normalize();
     }
 
     private void AddForceToRigidBody()
