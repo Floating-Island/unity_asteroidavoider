@@ -6,11 +6,8 @@ public class AsteroidSpawner : MonoBehaviour
     [SerializeField] private GameObject spawnTarget;
     [SerializeField] private GameObject[] asteroidPrefabs;
     [SerializeField] private float spawnRate = 1f;
-    [SerializeField] private float spawnForceMagnitudeMin = 0f;
-    [SerializeField] private float spawnForceMagnitudeMax = 1f;
-
-    private float timer;
-
+    [SerializeField] private float spawnSpeedMagnitudeMin = 0f;
+    [SerializeField] private float spawnSpeedMagnitudeMax = 1f;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -21,10 +18,10 @@ public class AsteroidSpawner : MonoBehaviour
 
     private void ValidateForceMagnitudeRange()
     {
-        if (spawnForceMagnitudeMax < spawnForceMagnitudeMin)
+        if (spawnSpeedMagnitudeMax < spawnSpeedMagnitudeMin)
         {
-            Debug.LogError("spawnForceMagnitudeMax must be greater than spawnForceMagnitudeMin");
-            throw new System.ArgumentOutOfRangeException("spawnForceMagnitudeMax", "spawnForceMagnitudeMax must be greater than spawnForceMagnitudeMin");
+            Debug.LogError("spawnSpeedMagnitudeMax must be greater than spawnSpeedMagnitudeMin");
+            throw new System.ArgumentOutOfRangeException("spawnSpeedMagnitudeMax", "spawnSpeedMagnitudeMax must be greater than spawnSpeedMagnitudeMin");
         }
     }
 
@@ -63,9 +60,9 @@ public class AsteroidSpawner : MonoBehaviour
 
     private void ImpulseAsteroid(GameObject asteroid)
     {
-        Vector3 forceDirection = (spawnTarget.transform.position - asteroid.transform.position).normalized;
-        float forceMagnitude = UnityEngine.Random.Range(spawnForceMagnitudeMin, spawnForceMagnitudeMax);
-        Vector3 force = forceDirection * forceMagnitude;
-        asteroid.GetComponent<Rigidbody>().linearVelocity = force;
+        Vector3 speedDirection = (spawnTarget.transform.position - asteroid.transform.position).normalized;
+        float speedMagnitude = UnityEngine.Random.Range(spawnSpeedMagnitudeMin, spawnSpeedMagnitudeMax);
+        Vector3 impulseVelocity = speedDirection * speedMagnitude;
+        asteroid.GetComponent<Rigidbody>().linearVelocity = impulseVelocity;
     }
 }

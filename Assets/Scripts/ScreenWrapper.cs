@@ -15,7 +15,6 @@ public class ScreenWrapper : MonoBehaviour
     void Update()
     {
         CorrectOffScreenPlayer();
-
     }
 
     private void CorrectOffScreenPlayer()
