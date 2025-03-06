@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class AsteroidSpawner : MonoBehaviour
@@ -13,6 +14,16 @@ public class AsteroidSpawner : MonoBehaviour
     void Start()
     {
         ValidateForceMagnitudeRange();
+        ContinuallySpawnAsteroids();
+    }
+
+    public void StopSpawningAsteroids()
+    {
+        CancelInvoke(nameof(SpawnAsteroid));
+    }
+
+    private void ContinuallySpawnAsteroids()
+    {
         InvokeRepeating(nameof(SpawnAsteroid), 0, spawnRate);
     }
 
@@ -23,12 +34,6 @@ public class AsteroidSpawner : MonoBehaviour
             Debug.LogError("spawnSpeedMagnitudeMax must be greater than spawnSpeedMagnitudeMin");
             throw new System.ArgumentOutOfRangeException("spawnSpeedMagnitudeMax", "spawnSpeedMagnitudeMax must be greater than spawnSpeedMagnitudeMin");
         }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
     }
 
     private void SpawnAsteroid()

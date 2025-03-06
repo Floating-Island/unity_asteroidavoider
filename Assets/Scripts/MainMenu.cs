@@ -7,10 +7,4 @@ public class MainMenu : MonoBehaviour
     {
         SceneManager.LoadScene("Game");
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
