@@ -28,6 +28,16 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    public void ResetState()
+    {
+        Vector2 viewportCenterLocation = new Vector2(0.5f, 0.5f);
+        Vector3 ScreenCenterLocation = Camera.main.ViewportToWorldPoint(viewportCenterLocation);
+        ScreenCenterLocation.z = transform.position.z;
+        transform.position = ScreenCenterLocation;
+        GetComponent<Rigidbody>().linearVelocity = Vector2.zero;
+        gameObject.SetActive(true);
+    }
+
     private void RotateTowardsMovementDirection()
     {
         if (playerRigidbody.linearVelocity.sqrMagnitude > 0)

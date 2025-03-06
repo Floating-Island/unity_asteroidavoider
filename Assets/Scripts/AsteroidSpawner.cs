@@ -22,6 +22,18 @@ public class AsteroidSpawner : MonoBehaviour
         CancelInvoke(nameof(SpawnAsteroid));
     }
 
+    internal void Pause()
+    {
+        StopSpawningAsteroids();
+        gameObject.SetActive(true);
+    }
+
+    public void Resume()
+    {
+        gameObject.SetActive(true);
+        ContinuallySpawnAsteroids();
+    }
+
     private void ContinuallySpawnAsteroids()
     {
         InvokeRepeating(nameof(SpawnAsteroid), 0, spawnRate);

@@ -21,6 +21,10 @@ public class ScoreSystem : MonoBehaviour
         scoreText.text = "Score: " + GetScore();
     }
 
+    private void OnEnable()
+    {
+        scoreText.enabled = true;
+    }
     private void OnDisable()
     {
         SaveScore();
